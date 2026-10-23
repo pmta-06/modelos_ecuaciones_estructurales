@@ -1,0 +1,16 @@
+
+  # --- Modelo de medición ---
+  Liderazgo =~ C21A + C21B + C21C + C21D + C21E +
+               C21F + C21G + C21H + C21I + C21J
+  Clima =~ C18A + C18B + C18C + C18D
+  Satisfaccion =~ C03A + C03B + C03C + C03D + C03E
+
+  # --- Modelo estructural ---
+  Clima ~ a*Liderazgo
+  Satisfaccion ~ b*Clima + c*Liderazgo
+
+  # --- Efectos ---
+  indirecto := a * b
+  directo   := c
+  total     := c + (a * b)
+
